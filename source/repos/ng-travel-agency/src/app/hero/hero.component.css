@@ -1,0 +1,85 @@
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+  }
+  
+  .content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+    margin-bottom: 100px;
+  }
+  
+  h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  .search-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+  }
+  
+  .search-box input, .search-box button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .search-box button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .airplane {
+    position: absolute;
+    width: 100px;
+    top: 50%;
+    left: -100px;
+    animation: flyPlane 3s forwards ease-out, floating 2s infinite ease-in-out;
+    transform: rotate(-5deg);
+    z-index: 1;
+  }
+  
+  .cloud {
+    position: absolute;
+    bottom: -100px;
+    animation: floatCloud 2s forwards ease-out, moveCloud 20s infinite linear;
+  }
+  
+  .cloud1 { left: 10%; animation-delay: 0.5s, 2s; }
+  .cloud2 { left: 30%; animation-delay: 0.8s, 2s; }
+  
+  @keyframes flyPlane {
+    from { left: -100px; }
+    to { left: calc(50% - 50px); }
+  }
+  
+  @keyframes floating {
+    0% { transform: rotate(-5deg) translate(0, 0); }
+    50% { transform: rotate(-3deg) translate(5px, -5px); }
+    100% { transform: rotate(-5deg) translate(0, 0); }
+  }
+  
+  @keyframes floatCloud {
+    from { bottom: -100px; opacity: 0; }
+    to { bottom: 50px; opacity: 1; }
+  }
+  
+  @keyframes moveCloud {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100vw); }
+  }
+  
