@@ -2,11 +2,10 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-top: 80px;
   }
   
   .content {
@@ -51,17 +50,26 @@
     animation: flyPlane 3s forwards ease-out, floating 2s infinite ease-in-out;
     transform: rotate(-5deg);
     z-index: 1;
+    scale: 5;
   }
   
   .cloud {
     position: absolute;
     bottom: -100px;
     animation: floatCloud 2s forwards ease-out, moveCloud 20s infinite linear;
+    scale: 6;  
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.51));
   }
   
   .cloud1 { left: 10%; animation-delay: 0.5s, 2s; }
-  .cloud2 { left: 30%; animation-delay: 0.8s, 2s; }
-  
+  .cloud2 { left: 25%; animation-delay: 0.8s, 2s; }
+  .cloud3 { left: 50%; animation-delay: 1s, 2s; }
+  .cloud4 { left: 90%; animation-delay: 1.2s, 2s; }
+  .cloud5 { left: 10%; animation-delay: 1s; }
+  .cloud6 { left: 40%; animation-delay: 1s; }
+  .cloud7 { left: 60%; animation-delay: 2s; }
+  .cloud8 { left: 80%; animation-delay: 2.5s; }
+
   @keyframes flyPlane {
     from { left: -100px; }
     to { left: calc(50% - 50px); }
@@ -75,11 +83,7 @@
   
   @keyframes floatCloud {
     from { bottom: -100px; opacity: 0; }
-    to { bottom: 50px; opacity: 1; }
+    to { bottom: 20px; opacity: 1; }
   }
-  
-  @keyframes moveCloud {
-    from { transform: translateX(0); }
-    to { transform: translateX(-100vw); }
-  }
+
   

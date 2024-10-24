@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { CommonModule } from '@angular/common';
-import { ProductCardComponent } from '../product-card/product-card.component'; 
+import { ProductCardComponent } from '../product-card/product-card.component';
 
 @Component({
   selector: 'app-product-list',
