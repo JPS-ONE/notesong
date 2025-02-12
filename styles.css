@@ -199,7 +199,7 @@ h1, h2{
 
 .title {
     font-family: "Doto", serif;
-    font-size: 10rem;
+    font-size: 12rem;
     color: black;
     margin: 40px 0;
     animation: glowingOutline 5s linear infinite;
@@ -381,7 +381,7 @@ h1, h2{
 
 /* Responsive Design */
 
-@media (max-width: 860px) {
+@media (max-width: 1024px) {
     .title {
         font-size: 8rem;
     }
